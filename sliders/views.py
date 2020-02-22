@@ -1,7 +1,10 @@
 from django.shortcuts import render, HttpResponse
+from .forms import ContactForm
 
-# Create your views here.
 
+# def home(request):
+#     return render(request, "sliders/sliders.html")
 
-def home(request):
-    return render(request, "sliders/sliders.html")
+def contact(request):
+    form = ContactForm()
+    return render(request, "sliders.html", {"form": form})
